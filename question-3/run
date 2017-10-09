@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+
+cat scripts/delete.txt  | bash
+cat scripts/command.txt | bash
+cat scripts/merge.txt   | bash

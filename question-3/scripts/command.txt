@@ -1,0 +1,7 @@
+hadoop jar /home/instructor/hadoop-streaming/hadoop-streaming-2.7.3.jar \
+-D mapred.reduce.tasks=6 \
+-files mapper.py,reducer.py \
+-mapper mapper.py \
+-reducer reducer.py \
+-input /user/dkrishna/wordcount/ \
+-output /user/patrick.withams/output

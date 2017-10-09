@@ -1,0 +1,1 @@
+Why does it ask for a count of each unique digram? Won't the count be 0 by default?

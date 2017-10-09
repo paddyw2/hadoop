@@ -1,0 +1,1 @@
+hadoop fs -getmerge /user/patrick.withams/output results.txt
