@@ -22,14 +22,14 @@ for line in sys.stdin:
   # set default values on first
   # loop
   if(first_loop):
-    current_word = words[0]
+    current_word = words[1]
     word_count = 1
     first_loop = False
     continue
 
   # if next word is same as current
   # word, increase word count
-  if(words[0] == current_word):
+  if(words[1] == current_word):
     word_count += 1
   else:
     print current_word + "\t" + str(word_count)
@@ -37,7 +37,7 @@ for line in sys.stdin:
     word_not_printed = False
 
   # always executed, unless continue
-  current_word = words[0]
+  current_word = words[1]
 
 # if last word stats not printed
 # due to previous duplicate, print

@@ -1,5 +1,5 @@
 hadoop jar /home/instructor/hadoop-streaming/hadoop-streaming-2.7.3.jar \
--D mapred.reduce.tasks=26 \
+-D mapred.reduce.tasks=27 \
 -D stream.num.map.output.key.fields=2 \
 -D mapred.text.key.partitioner.options=-k1,1 \
 -files mapper.py,reducer.py \
@@ -10,5 +10,4 @@ hadoop jar /home/instructor/hadoop-streaming/hadoop-streaming-2.7.3.jar \
 -partitioner org.apache.hadoop.mapred.lib.KeyFieldBasedPartitioner 
 
 # mapper output of form:
-# word, 1
 #

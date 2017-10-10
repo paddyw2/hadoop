@@ -4,6 +4,24 @@
 import string
 import sys
 
+def get_hash_identifier(word):
+  # 'l' hashes to 0 and
+  # is used for numbers
+  val = 'l'
+  if(word[0].isalpha()):
+    val = ord(word[0]) - 97
+    # letters are incremented by
+    # 12 ascii values to hash to
+    # their appropriate values
+    val += 12
+    # to fit into all reducers
+    # modulo by reducer total
+    val = val % 27
+    val += 97
+    val = chr(val)
+
+  return val
+
 def strip_punc(word):
   for c in string.punctuation:
     word=word.replace(c,"")
@@ -24,8 +42,9 @@ def main():
       # if it is punctuation, remove it
       word = strip_punc(word)
       if(word != ""):
-        val = ord(word[0])-97
-        # print each word, with 1 after
-        print '%s\t%s' %(word,1) 
+        id_val = get_hash_identifier(word)
+        # print each hash identifier,
+        # word, and initial count
+        print '%s\t%s\t%s' %(id_val,word,1) 
 
 main()

@@ -1,6 +1,5 @@
 #!/usr/bin/env python
 #reducer.py
-
 import string
 import sys
 import random
@@ -36,11 +35,9 @@ for line in sys.stdin:
     digram_count += 1
     continue
   else:
-    # if digram is different and only
-    # one of previous counted, print
-    # digram as it is unique
-    if(digram_count == 1):
-      print previous_word_1 + "," + previous_word_2 + "\t" + str(digram_count)
+    # if digram is different then print
+    # previous digram, along with count
+    print previous_word_1 + "," + previous_word_2 + "\t" + str(digram_count)
     # set current digram as new previous
     # and reset count
     previous_word_1 = words[0]
